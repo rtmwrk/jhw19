@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "testdb"
+      POSTGRES_USER: "testuser"
+      POSTGRES_PASSWORD: "111"
+      PGDATA: "./data:/var/lib/postgresql/data/pgdata"
+    ports:
+      - "5432:5432"
